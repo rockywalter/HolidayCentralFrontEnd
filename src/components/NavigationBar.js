@@ -23,7 +23,7 @@ export default function NavigationBar() {
         <a className="nav-link" href="/hotel">Hotel Booking</a>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="#">Packages</a>
+        <a className="nav-link" href="/package">Packages</a>
       </li>
 
     </ul>
