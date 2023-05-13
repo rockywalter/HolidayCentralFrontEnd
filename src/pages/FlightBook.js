@@ -8,21 +8,6 @@ export default function FlightBook() {
   let[data,setData] = useState([])
   const[alldata,setAllData] = useState([])
   
-
-  useEffect(()=>{
-    axios.get('http://localhost:5000/flights')
-    .then(res=>setAllData(res.data))
-    .catch(err=>console.log(err));
-  },[])
-
-  const uniqueArray = alldata.reduce((accumulator, value) => {
-    if (!accumulator.includes(value)) {
-      accumulator.push(value);
-    }
-    return accumulator;
-  }, []);
-
-  console.log(uniqueArray);
   
   const[departure,setDeparture] = useState("")
   const[arrival ,setArrival] = useState("")
@@ -92,14 +77,10 @@ export default function FlightBook() {
   <select id="inputState" class="form-control" onChange={(e)=>{
     setDeparture(e.target.value);
   }}>
-  {
- uniqueArray.map((flight,index)=>{
-return<option key={index} > {flight.departure_destination}</option>
- 
- })
-
-}
 <option selected > Choose </option>
+<option  > Sri Lanka </option>
+<option  > India </option>
+<option  > Australia </option>
     </select>
   </div>
   <div class="col">
@@ -107,15 +88,10 @@ return<option key={index} > {flight.departure_destination}</option>
   <select id="inputState" class="form-control" onChange={(e)=>{
     setArrival(e.target.value);
   }}>
-    
-  {
- uniqueArray.map((flight,index)=>{
-return<option key={index} > {flight.arrival_destination}</option>
- 
- })
-
-}
-<option selected > Choose </option>
+<option selected > Choose </option>    
+<option  > Sri Lanka </option>
+<option  > India </option>
+<option  > Australia </option>
     </select>
   </div >
   <div class="col">
