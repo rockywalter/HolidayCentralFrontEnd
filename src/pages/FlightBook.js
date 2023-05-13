@@ -44,13 +44,12 @@ export default function FlightBook() {
   const navigate = useNavigate();
   const price = 'yourData';
 
-  const navigateToDestination = () => {
-    navigate(`/cart/${price}`);
-  };
+  // const navigateToDestination = () => {
+  //   navigate(`/cart/${price}`);
+  // };
 
 
   const [priceFilter, setPriceFilter] = useState('');
-  const [airlineFilter, setAirlineFilter] = useState('');
 
   const handlePriceFilterChange = (e) => {
     setPriceFilter(e.target.value);
@@ -189,7 +188,10 @@ return<tr key={index}>
         <h6 class="card-subtitle mb-2 text-muted">{flight.price}</h6>
       </div>
       <div class="col-sm-6">
-        <button onClick={navigateToDestination} class="btn btn-primary w-100">Book Now</button>
+        <button onClick={ () => {
+
+    navigate(`/cart/${flight.price}`);
+  }} class="btn btn-primary w-100">Book Now</button>
        
       </div>
     </div>

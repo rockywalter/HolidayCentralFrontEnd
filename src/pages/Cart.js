@@ -23,18 +23,20 @@ export default function Cart() {
     setSeatType('');
   };
 
-  const { price } = useParams();
+  const { price } = useParams(); 
+
+
 
 
   return (
     <div className="container mt-4" style={{ background: '#f8f9fa' }}>
-      <h2 className="text-center mb-4">Flight Details</h2>
+      <h2 className="text-center mb-4">Flight Book</h2>
 
       <div className="card mb-4">
         <div className="card-body">
-          <h5 className="card-title">Flight Name: ABC123</h5>
-          <p className="card-text">Departure: New York</p>
-          <p className="card-text">Arrival: London</p>
+          <h5 className="card-title">Flight Number: f01</h5>
+          <p className="card-text">Departure: Sri Lanka</p>
+          <p className="card-text">Arrival: India</p>
           <p className="card-text">Price:{ price }</p>
         </div>
       </div>
