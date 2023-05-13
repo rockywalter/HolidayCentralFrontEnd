@@ -2,6 +2,8 @@ import './App.css';
 import NavigationBar from './components/NavigationBar';
 import FlightBook from './pages/FlightBook';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HotelBook from './pages/HotelBook';
+import Cart from './pages/Cart';
 
 
 function App() {
@@ -11,6 +13,9 @@ function App() {
     <NavigationBar/>
     <Routes>     
       <Route path="/flight" element={<FlightBook />} />
+      <Route path="/hotel" element={<HotelBook />} />
+      <Route path="/cart/:price" element={<Cart/>} />
+      
     </Routes> 
     
     </div>

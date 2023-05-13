@@ -20,7 +20,7 @@ export default function NavigationBar() {
         <a className="nav-link" href="/flight">Flight Booking</a>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="#">Hotel Booking</a>
+        <a className="nav-link" href="/hotel">Hotel Booking</a>
       </li>
       <li className="nav-item">
         <a className="nav-link" href="#">Packages</a>
